@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Primer trimestre Diseño web</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f0f4f8;
+            color: #333;
+        }
+        /* Parpadeo del título */
+        @keyframes parpadeo {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            animation: parpadeo 1.5s infinite;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #2c3e50;
+            text-shadow: 1px 1px 5px #2980b9;
+        }
+
+        /* Contenedor principal */
+        .contenedor {
+            display: flex;
+            width: 85%;
+            max-width: 1100px;
+            gap: 40px;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Información de GitHub */
+        .info-github {
+            flex: 1;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #34495e;
+            display: flex;
+            flex-direction: column;
+        }
+        .info-github h2 {
+            color: #2980b9;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #2980b9;
+            padding-bottom: 8px;
+            font-weight: 700;
+        }
+        .info-github p {
+            margin-bottom: 18px;
+        }
+        .info-github ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .info-github ul li {
+            margin-bottom: 10px;
+        }
+        .info-github a {
+            color: #2980b9;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .info-github a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenedor del video con marco */
+        .video-marco {
+            flex: 1;
+            border: 5px solid #2980b9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(41, 128, 185, 0.7);
+            max-width: 560px; /* ancho exacto para video */
+        }
+        .video-marco iframe {
+            display: block;
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+
+        /* Imagen añadida al final */
+        .imagen-github {
+            margin-top: 30px;
+            border: 5px solid #2980b9;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(41, 128, 185, 0.7);
+            max-width: 100%;
+            max-height: 315px;
+            object-fit: contain;
+            align-self: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .contenedor {
+                flex-direction: column;
+            }
+            .video-marco iframe {
+                height: 280px;
+            }
+            .video-marco {
+                max-width: 100%;
+            }
+            .imagen-github {
+                max-height: 240px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Primer trimestre Diseño web</h1>
+
+    <div class="contenedor">
+        <div class="info-github">
+            <h2>¿Qué es GitHub?</h2>
+            <p>
+                GitHub es una plataforma basada en la web que utiliza el sistema de control de versiones Git para gestionar y alojar proyectos de software. 
+                Permite a desarrolladores de todo el mundo colaborar, compartir código y hacer seguimiento de los cambios realizados en sus proyectos.
+            </p>
+
+            <h2>¿Para qué sirve GitHub?</h2>
+            <ul>
+                <li><strong>Control de versiones:</strong> Mantén un historial completo de todos los cambios en el código.</li>
+                <li><strong>Colaboración:</strong> Trabaja en equipo desde diferentes lugares, revisa y combina el trabajo de otros fácilmente.</li>
+                <li><strong>Gestión de proyectos:</strong> Usa herramientas como Issues, Pull Requests y Wikis para organizar y documentar tu trabajo.</li>
+                <li><strong>Portafolio profesional:</strong> Muestra tus proyectos y contribuciones a futuros empleadores o colaboradores.</li>
+            </ul>
+
+            <h2>¿Cómo se usa GitHub?</h2>
+            <p>
+                Para usar GitHub, primero debes crear una cuenta gratuita en <a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com</a>. 
+                Luego, puedes crear repositorios donde alojar tu código. Usando Git desde tu computadora, podrás:
+            </p>
+            <ul>
+                <li>Subir archivos al repositorio (commit y push)</li>
+                <li>Descargar proyectos existentes (clone y pull)</li>
+                <li>Crear ramas para probar cambios sin afectar el proyecto principal</li>
+                <li>Solicitar revisiones mediante Pull Requests para integrar cambios</li>
+            </ul>
+
+            <h2>Beneficios clave de GitHub</h2>
+            <ul>
+                <li>Facilita la colaboración entre desarrolladores.</li>
+                <li>Mejora la calidad del código mediante revisiones.</li>
+                <li>Permite revertir errores y comparar versiones previas.</li>
+                <li>Integra con otras herramientas y servicios (CI/CD, despliegues, etc.).</li>
+            </ul>
+
+            <p>GitHub se ha convertido en una herramienta fundamental para el desarrollo web y software moderno. ¡Aprender a usarla es indispensable!</p>
+
+            <!-- Imagen al final -->
+            <img class="imagen-github" src="https://cdn.prod.website-files.com/5f5a53e153805db840dae2db/64e79ca5aff2fb7295bfddf9_github-que-es.jpg" alt="Imagen sobre GitHub" />
+        </div>
+
+        <div class="video-marco">
+            <iframe src="https://www.youtube.com/embed/IFcWZgJzBt0" title="Video de YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>
